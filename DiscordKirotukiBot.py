@@ -11,7 +11,7 @@ CHANNEL_ID =  # 消去するチャンネルID
 
 client = discord.Client()
 
-##ここで指定したIDにしかmisskeyに投稿できないようになっています.
+##ここで指定したUserIDの人しかmisskeyに投稿できないようになっています.
 discordUserID = #DiscordのユーザーID
 
 url = "https://misskey.io/api/notes/create" #misskeyインスタンスここではio
@@ -49,7 +49,7 @@ async def on_message(message):
         print(postText)
 
         json_data = {
-            "i": "qdA8HXmPjj0hv0T8Sa6njQb5LRX3nfzj",
+            "i": "",#ここの””にmisskeyのトークン
             "text": postText
         }
 
